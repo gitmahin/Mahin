@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            font-family: "Poppins", sans-serif;
+            padding: 0;
+        }
+
+        body {
+            overflow-x: hidden;
+            background-color: #01030E;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        @keyframes curani {
+            to {
+                width: 0px;
+                height: 0px;
+            }
+        }
+
+        .hero-section {
+            border: none;
+            width: 100%;
+            height: fit-content;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            padding-top: 15px;
+
+        }
+
+        .bannerimg {
+            background-image: url(./img/bannerimg.png);
+            max-width: 1500px;
+            width: 90vw;
+            height: 415px;
+            border: 1px solid black;
+            border-radius: 26px;
+            background-position: center;
+            background-size: cover;
+            box-shadow: inset 0px -52px 40px black;
+
+
+        }
+
+        .header {
+            position: absolute;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            bottom: 0;
+            transform: translate(0%, 50%);
+        }
+
+        .info {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .info h1 {
+            font-size: 30px;
+            color: white;
+            text-align: center;
+
+
+        }
+
+        .info p {
+            font-size: 20px;
+            color: #A54FFB;
+            background-image: linear-gradient(95deg, rgb(74, 247, 181), #b268fd);
+            background-size: 100%;
+            -webkit-background-clip: text;
+            -moz-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            -moz-text-fill-color: transparent;
+            font-weight: 600;
+        }
+
+
+        .mainimg img {
+            width: 149px;
+            height: 149px;
+            border: none;
+            border-radius: 50%;
+            object-fit: cover;
+            object-position: center;
+            outline: 3px solid #01030E;
+
+        }
+
+        main {
+            margin-top: 120px;
+            width: 100%;
+            margin-bottom: 30px;
+            display: flex;
+            justify-content: center;
+
+        }
+
+        .mainwrapper {
+            max-width: 1500px;
+            width: 90vw;
+        }
+
+        .socialcontainer {
+            border-top: 1px solid rgba(255, 255, 255, 0.096);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.096);
+            position: relative;
+            padding: 40px 0px 40px 0px;
+            margin-bottom: 25px;
+        }
+
+        .scapsule {
+            padding: 4px 15px;
+            background-color: #d22fe11e;
+            width: fit-content;
+            border-radius: 50px;
+            position: absolute;
+            top: 0;
+            left: 20px;
+            transform: translate(0%, -50%);
+
+        }
+
+        .scapsule h3 {
+            color: white;
+            font-weight: 600;
+        }
+
+        .scontent ul {
+            list-style-type: none;
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .scontent ul a {
+            color: white;
+            font-size: 20px;
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            align-items: center;
+            border: none;
+            padding: 10px;
+            border-radius: 10px;
+        }
+
+        .scontent ul a:hover {
+            background-color: #d22fe11e;
+        }
+
+        .scontent img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            object-fit: cover;
+            object-position: center;
+        }
+
+        .contactcontainer {
+            border-top: 1px solid rgba(255, 255, 255, 0.096);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.096);
+            position: relative;
+            padding: 40px 0px 40px 0px;
+        }
+
+        .ccapsule {
+            padding: 4px 15px;
+            background-color: #4bd1811f;
+            width: fit-content;
+            border-radius: 50px;
+            position: absolute;
+            top: 0;
+            left: 20px;
+            transform: translate(0%, -50%);
+
+        }
+
+        .ccapsule h3 {
+            color: white;
+            font-weight: 600;
+        }
+
+        .ccontent ul {
+            list-style-type: none;
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .ccontent ul a {
+            color: white;
+            font-size: 20px;
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            align-items: center;
+            border: none;
+            padding: 10px;
+            border-radius: 10px;
+        }
+
+        .ccontent ul a:hover {
+            background-color: #4bd1811f;
+        }
+
+        .ccontent img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            object-fit: cover;
+            object-position: center;
+        }
+
+        .typed-cursor {
+            color: white !important;
+            -webkit-text-fill-color: white;
+        }
+
+
+        footer p {
+            color: rgb(126, 126, 126);
+            font-size: 14px;
+            text-align: center;
+            margin: 0px 0px 15px 0px;
+
+        }
+
+        @media screen and (max-width: 567px) {
+
+            .bannerimg {
+                height: 300px;
+            }
+
+            .header {
+                margin-right: 48px;
+                margin-left: 48px;
+                flex-direction: column;
+                align-items: center;
+                transform: translate(0%, 65%);
+                gap: 0px;
+
+
+            }
+
+            .header h1 {
+                font-size: 23px;
+            }
+
+            .info p {
+                font-size: 17px;
+                text-align: center;
+            }
+
+            .info {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+
+            main {
+                margin-top: 250px;
+            }
+
+            .ccontent ul a {
+
+                font-size: 16px;
+
+            }
+
+            .scontent ul a {
+
+                font-size: 16px;
+
+            }
+
+            .scapsule h3 {
+                font-size: 17px;
+            }
+
+            .ccapsule h3 {
+                font-size: 17px;
+            }
+
+            .scontent img {
+                width: 40px;
+                height: 40px;
+
+            }
+
+            .ccontent img {
+                width: 40px;
+                height: 40px;
+
+
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <div class="cursor"></div>
+    <div class="hero-section">
+        <div class="bannerimg">
+            <img src="" alt="">
+        </div>
+        <header class="header">
+            <div class="mainimg">
+                <img src="./img/141026311.jpg" alt="">
+            </div>
+            <div class="info">
+                <h1>Nimul Islam Mahin</h1>
+                <p><span class="type"></span></p>
+            </div>
+        </header>
+    </div>
+    <main>
+        <div class="mainwrapper">
+            <div class="socialcontainer">
+                <div class="scapsule">
+                    <h3>My Social</h3>
+                </div>
+                <div class="scontent">
+                    <ul>
+                        <a href="https://www.facebook.com/ni.mahin.94"><img src="./img/facebook.png" alt="">
+                            <li>Nimul Islam Mahin</li>
+                        </a>
+                        <a href="https://www.instagram.com/devel0per_mahin/"><img src="./img/instagram.png" alt="">
+                            <li>devel0per_mahin</li>
+                        </a>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="contactcontainer">
+                <div class="ccapsule">
+                    <h3>Contact With Me</h3>
+                </div>
+                <div class="ccontent">
+                    <ul>
+                        <a href="mailto:nimulmahin@gmail.com"><img src="./img/gmail.png" alt="">
+                            <li>nimulmahin@gmail.com</li>
+                        </a>
+                        <a href="whatsapp:contact=+8801950787553@s.whatsapp.com&message=" Hey, Mahin! How are you?"><img
+                                src="./img/whatsapp.png" alt="">
+                            <li>WhatsApp</li>
+                        </a>
+                        <a href="http://m.me/ni.mahin.94"><img src="./img/messenger.png" alt="">
+                            <li>Messenger</li>
+                        </a>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </main>
+    <footer>
+        <p>Copyright &copy devel0perMahin.com | All rights reserverd</p>
+    </footer>
+    <script>
+        let type = new Typed(".type", {
+            strings: ["Welcome to my site", "Connect with me", "Contact me"],
+            typeSpeed: 30,
+            backSpeed: 26,
+            loop: true
+        })
+    </script>
+</body>
+
+</html>
