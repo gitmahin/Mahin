@@ -241,6 +241,13 @@
             margin: 0px 10px 15px 10px;
         }
 
+        .absolute{
+            position: absolute;
+            left: 50%;
+            bottom: 0;
+            transform: translate(-50%, 0%);
+        }
+
         @media screen and (max-width: 567px) {
 
             .bannerimg {
@@ -368,8 +375,8 @@
 
         </div>
     </main>
-    <footer>
-        <p>Copyright &copy devel0perMahin.com | All rights reserverd</p>
+    <footer class="footer">
+        <p class="copyright">Copyright &copy devel0perMahin.com | All rights reserverd</p>
     </footer>
     <script>
         let type = new Typed(".type", {
@@ -378,6 +385,18 @@
             backSpeed: 26,
             loop: true
         })
+
+        const body = document.querySelector('body'),
+        footer = body.querySelector('.footer')
+        
+        let verscro = body.scrollWidth > body.clientHeight
+
+        console.log(verscro);
+        if(verscro != true){
+            footer.classList.add('absolute')
+        }else{
+            footer.classList.remove('absolute')
+        }
     </script>
 </body>
 
