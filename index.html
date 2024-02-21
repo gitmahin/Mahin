@@ -79,7 +79,7 @@
             font-size: 30px;
             color: white;
             text-align: center;
-       
+
         }
 
         .info p {
@@ -179,6 +179,7 @@
             border-bottom: 1px solid rgba(255, 255, 255, 0.096);
             position: relative;
             padding: 40px 0px 40px 0px;
+            margin-bottom: 90px;
         }
 
         .ccapsule {
@@ -241,12 +242,12 @@
             margin: 0px 10px 15px 10px;
         }
 
-        /* .absolute{
+        .absolute {
             position: absolute;
             left: 50%;
             bottom: 0;
             transform: translate(-50%, 0%);
-        } */
+        }
 
         @media screen and (max-width: 567px) {
 
@@ -308,7 +309,8 @@
                 width: 40px;
                 height: 40px;
             }
-            footer p{
+
+            footer p {
                 font-size: 13px;
             }
 
@@ -316,7 +318,7 @@
     </style>
 </head>
 
-<body>
+<body id="body">
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
     <div class="cursor"></div>
     <div class="hero-section">
@@ -340,10 +342,12 @@
                 </div>
                 <div class="scontent">
                     <ul>
-                        <a href="https://www.facebook.com/ni.mahin.94"><img src="./img/facebook.png" alt="facebook-icon">
+                        <a href="https://www.facebook.com/ni.mahin.94"><img src="./img/facebook.png"
+                                alt="facebook-icon">
                             <li>Nimul Islam Mahin</li>
                         </a>
-                        <a href="https://www.instagram.com/devel0per_mahin/"><img src="./img/instagram.png" alt="instagram-icon">
+                        <a href="https://www.instagram.com/devel0per_mahin/"><img src="./img/instagram.png"
+                                alt="instagram-icon">
                             <li>devel0per_mahin</li>
                         </a>
                         <a href="https://github.com/gitmahin"><img src="./img/github.png" alt="github-icon">
@@ -362,8 +366,7 @@
                         <a href="mailto:nimulmahin@gmail.com"><img src="./img/gmail.png" alt="gmail-icon">
                             <li>nimulmahin@gmail.com</li>
                         </a>
-                        <a href="https://wa.me/+8801950787553"><img
-                                src="./img/whatsapp.png" alt="whatsapp-icon">
+                        <a href="https://wa.me/+8801950787553"><img src="./img/whatsapp.png" alt="whatsapp-icon">
                             <li>WhatsApp</li>
                         </a>
                         <a href="http://m.me/ni.mahin.94"><img src="./img/messenger.png" alt="messenger-icon">
@@ -385,18 +388,17 @@
             backSpeed: 26,
             loop: true
         })
-
-        const body = document.querySelector('body'),
-        footer = body.querySelector('.footer')
-        
-        let verscro = body.scrollWidth > body.clientHeight
-
-        console.log(verscro);
-        if(verscro != true){
-            footer.classList.add('absolute')
-        }else{
-            footer.classList.remove('absolute')
-        }
+        const footer = document.querySelector('.footer')
+        setInterval(() => {
+            let bodyVScroActive = document.body.scrollHeight;
+            let clientHeight = document.documentElement.clientHeight;
+            let hasVerticalScrollbar = bodyVScroActive > clientHeight;
+            if (hasVerticalScrollbar == false) {
+                footer.classList.add('absolute')
+            } else {
+                footer.classList.remove('absolute')
+            }
+        }, 100);
     </script>
 </body>
 
