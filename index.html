@@ -25,6 +25,7 @@
 
         a {
             text-decoration: none;
+            color: white;
         }
 
         @keyframes curani {
@@ -109,7 +110,7 @@
         main {
             margin-top: 120px;
             width: 100%;
-            margin-bottom: 30px;
+            margin-bottom: 90px;
             display: flex;
             justify-content: center;
         }
@@ -124,7 +125,7 @@
             border-bottom: 1px solid rgba(255, 255, 255, 0.096);
             position: relative;
             padding: 40px 0px 40px 0px;
-            margin-bottom: 25px;
+            margin-bottom: 50px;
         }
 
         .scapsule {
@@ -159,7 +160,7 @@
             align-items: center;
             border: none;
             padding: 10px;
-            border-radius: 10px;
+            border-radius: 50px;
         }
 
         .scontent ul a:hover {
@@ -179,7 +180,7 @@
             border-bottom: 1px solid rgba(255, 255, 255, 0.096);
             position: relative;
             padding: 40px 0px 40px 0px;
-            margin-bottom: 90px;
+            margin-bottom: 50px;
         }
 
         .ccapsule {
@@ -203,6 +204,8 @@
             display: flex;
             gap: 10px;
             flex-wrap: wrap;
+            width: 100%;
+
         }
 
         .ccontent ul a {
@@ -214,7 +217,7 @@
             align-items: center;
             border: none;
             padding: 10px;
-            border-radius: 10px;
+            border-radius: 50px;
         }
 
         .ccontent ul a:hover {
@@ -247,6 +250,100 @@
             left: 50%;
             bottom: 0;
             transform: translate(-50%, 0%);
+        }
+
+        .githubcontainer {
+            width: 100%;
+            background: linear-gradient(#01030c, #01030c) padding-box,
+                linear-gradient(to right, rgba(255, 255, 255, 0.158), #44048341) border-box;
+            border-top: 1px solid transparent;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            padding-top: 60px;
+
+        }
+
+        .gitcapsule {
+            position: absolute;
+            top: 0%;
+            transform: translate(0%, -50%);
+        }
+
+        .gitcapsule a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 8px 20px;
+            background: linear-gradient(#01030c, #01030c) padding-box,
+                linear-gradient(to right, rgba(255, 255, 255, 0.342), #4404837c) border-box;
+            border-radius: 6px;
+            border: 1px solid transparent;
+
+        }
+
+        .gitcapsule a:hover {
+            background: linear-gradient(to right, rgb(2, 5, 24), #10011f) padding-box;
+            color: white;
+        }
+
+        .gitcapsule a img {
+            width: 50px;
+            height: 50px;
+            object-fit: cover;
+            object-position: center;
+            border: none;
+            border-radius: 50%;
+
+        }
+
+        .gitcapsule h2 {
+            font-size: 18px;
+            letter-spacing: 5px;
+        }
+
+        .gitsubcontainer ul {
+            border: none;
+            list-style-type: none;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            justify-content: center;
+        }
+
+        .gitsubcontainer ul li {
+            border-radius: 6px;
+            padding: 10px;
+            background: linear-gradient(#01030c, #01030c) padding-box,
+                linear-gradient(to right, rgb(7, 43, 71), #430483) border-box;
+            border-radius: 6px;
+            border: 1px solid transparent;
+            width: 310px;
+            height: 96px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+        }
+
+        .gitsubcontainer ul li:hover {
+            background: linear-gradient(to right, rgba(7, 43, 71, 0.253), #660fbd25) padding-box;
+        }
+
+        .gitsubcontainer ul li h3 {
+            color: rgb(0, 140, 255);
+            margin-bottom: 3px;
+            font-weight: 500;
+        }
+
+        .gitsubcontainer ul li p {
+            font-size: 13px;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 3;
+            overflow: hidden;
+            color: rgb(136, 136, 136);
+
         }
 
         @media screen and (max-width: 567px) {
@@ -315,6 +412,12 @@
             }
 
         }
+
+        @media screen and (max-width: 370px) {
+            .gitsubcontainer ul li {
+                width: 220px;
+            }
+        }
     </style>
 </head>
 
@@ -350,9 +453,6 @@
                                 alt="instagram-icon">
                             <li>devel0per_mahin</li>
                         </a>
-                        <a href="https://github.com/gitmahin"><img src="./img/github.png" alt="github-icon">
-                            <li>gitmahin</li>
-                        </a>
                     </ul>
                 </div>
             </div>
@@ -376,6 +476,32 @@
                 </div>
             </div>
 
+            <div class="githubcontainer">
+                <div class="gitcapsule">
+                    <a href="https://github.com/gitmahin"><img src="./img/github.png" alt="github-icon">
+                        <h2>GITMAHIN</h2>
+                    </a>
+                </div>
+                <div class="gitsubcontainer">
+                    <ul>
+                        <a href="https://github.com/gitmahin/Projects_For_You">
+                            <li>
+                                <h3>Projects For You</h3>
+                                <p>I upload here some projects for you. It's free.</p>
+                            </li>
+                        </a>
+                        <a href="https://github.com/gitmahin/Notes">
+                            <li>
+                                <h3>Notes</h3>
+                                <p>Explore comprehensive and well-organized code notes for efficient development. Clear
+                                    explanations, code samples, and best practices.</p>
+                            </li>
+                        </a>
+
+                    </ul>
+                </div>
+            </div>
+
         </div>
     </main>
     <footer class="footer">
@@ -392,7 +518,7 @@
         setInterval(() => {
             let bodyVScroActive = document.body.scrollHeight;
             let clientHeight = document.documentElement.clientHeight;
-            let hasVerticalScrollbar = bodyVScroActive > clientHeight;   
+            let hasVerticalScrollbar = bodyVScroActive > clientHeight;
             if (hasVerticalScrollbar == false) {
                 footer.classList.add('absolute')
             } else {
