@@ -370,6 +370,40 @@
 
         }
 
+        .scrolltotop {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            display: none;
+            width: 40px;
+            height: 40px;
+            display: none;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50px;
+            border: none;
+            background: linear-gradient(to top, #01030c, rgba(58, 5, 112, 0.322));
+            cursor: pointer;
+            transition: .1s;
+            user-select: none
+           
+        }
+        .scrolltotop:active{
+            width: 40px;
+            height: 60px;
+            border-radius: 50px;
+            background: linear-gradient(to top, #01030c, rgb(78, 6, 150));
+        }
+        
+        .material-symbols-outlined{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: 600;
+            color: white;
+            user-select: none;
+        }
+
         @media screen and (max-width: 567px) {
 
             .bannerimg {
@@ -436,47 +470,22 @@
             }
         }
 
+        @media screen and (max-width: 510px){
+            .scrolltotop{
+                right: 50%;
+                bottom: 50px;
+                transform: translate(50%, 0%);
+
+            }
+        }
+
         @media screen and (max-width: 370px) {
             .gitsubcontainer ul li {
                 width: 220px;
             }
         }
 
-        .scrolltotop {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            display: none;
-            width: 40px;
-            height: 40px;
-            display: none;
-            justify-content: center;
-            align-items: center;
-            border-radius: 50px;
-            border: none;
-            background: linear-gradient(to top, #01030c, rgba(58, 5, 112, 0.322));
-            cursor: pointer;
-            transition: .1s;
-            user-select: none
-           
-        }
-        .scrolltotop:active{
-            width: 40px;
-            height: 60px;
-            border-radius: 50px;
-            background: linear-gradient(to top, #01030c, rgb(78, 6, 150));
-        }
         
-        .material-symbols-outlined{
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-weight: 600;
-            color: white;
-            user-select: none;
-        }
-
-
     </style>
 </head>
 
