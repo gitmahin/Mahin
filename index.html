@@ -476,13 +476,22 @@
             }
         }
 
+        .datetime{
+            color: rgb(177, 177, 177);
+            left: 0;
+            font-size: 14px;
+            letter-spacing: 2px;
+            text-align: center;
+            margin-bottom: 10px;
+            font-weight: 500;
+        }
+
 
     </style>
 </head>
 
 <body id="body">
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
-    <div class="cursor"></div>
     <div class="hero-section">
         <div class="bannerimg">
         </div>
@@ -564,6 +573,7 @@
         </div>
     </main>
     <footer class="footer">
+        <div class="datetime"></div>
         <p class="copyright">Copyright &copy devel0perMahin.com | All rights reserverd</p>
         <button class="scrolltotop"><span class="material-symbols-outlined">
             expand_less
@@ -571,12 +581,21 @@
     </footer>
     <script>
         const scrolltopbtn = document.querySelector('.scrolltotop')
+        const datetime = document.querySelector('.datetime')
         let type = new Typed(".type", {
             strings: ["Welcome to my APP", "Connect with me", "Contact me"],
             typeSpeed: 30,
             backSpeed: 26,
             loop: true
         })
+
+        setInterval(() => {
+            const date = new Date()
+            const localDate = date.toLocaleString('en-US', {
+                hour12: false,
+            })   
+            datetime.innerHTML = localDate
+        }, 1000);
 
         const scrollToTop = ()=> {
             window.scrollTo({ top: 0, behavior: 'smooth' });
