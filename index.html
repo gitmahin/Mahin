@@ -109,7 +109,6 @@
 
         .info p {
             font-size: 20px;
-            color: #A54FFB;
             background-image: linear-gradient(95deg, rgb(74, 247, 181), #b268fd);
             background-size: 100%;
             -webkit-background-clip: text;
@@ -261,12 +260,24 @@
             -webkit-text-fill-color: white;
         }
 
+        .footer{
+            padding: 6px;
+        }
+
+        .footcontainer{
+            background: linear-gradient(#01030c, #01030c) padding-box,
+                linear-gradient(to right, rgb(7, 43, 71), #430483) border-box;
+            border: 1px solid transparent;
+            padding: 15px 0px 15px 0px;
+            border-radius: 7px;
+
+        }
 
         footer p {
             color: rgb(100, 100, 100);
             font-size: 14px;
             text-align: center;
-            margin: 0px 10px 15px 10px;
+            margin: 0px 10px 0px 10px;
         }
 
         .absolute {
@@ -579,8 +590,11 @@
         </div>
     </main>
     <footer class="footer">
-        <div class="datetime"></div>
-        <p class="copyright">Copyright &copy devel0perMahin.com | All rights reserverd</p>
+        <div class="footcontainer">
+            <div class="datetime"></div>
+            <p class="copyright">Copyright &copy devel0perMahin.com | All rights reserverd</p>
+
+        </div>
         <button class="scrolltotop"><span class="material-symbols-outlined">
             expand_less
             </span></button>
@@ -589,7 +603,7 @@
         const scrolltopbtn = document.querySelector('.scrolltotop')
         const datetime = document.querySelector('.datetime')
         let type = new Typed(".type", {
-            strings: ["Welcome to my APP", "Connect with me", "Contact me"],
+            strings: ["Welcome to my APP", "Ramadan Mubarak", "Connect with me", "Contact me"],
             typeSpeed: 30,
             backSpeed: 26,
             loop: true
