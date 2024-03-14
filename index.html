@@ -525,11 +525,11 @@
                 </div>
                 <div class="scontent">
                     <ul>
-                        <a href="https://apps.facebook.com/ni.mahin.94"><img src="./img/facebook.png"
+                        <a id="fbbtn" href="https://apps.facebook.com/ni.mahin.94"><img src="./img/facebook.png"
                                 alt="facebook-icon">
                             <li>Nimul Islam Mahin</li>
                         </a>
-                        <a href="https://www.instagram.com/devel0per_mahin/"><img src="./img/instagram.png"
+                        <a id="instbtn" href="https://www.instagram.com/devel0per_mahin/"><img src="./img/instagram.png"
                                 alt="instagram-icon">
                             <li>devel0per_mahin</li>
                         </a>
@@ -543,13 +543,13 @@
                 </div>
                 <div class="ccontent">
                     <ul>
-                        <a href="mailto:nimulmahin@gmail.com"><img src="./img/gmail.png" alt="gmail-icon">
+                        <a id="emailbtn" href="mailto:nimulmahin@gmail.com"><img src="./img/gmail.png" alt="gmail-icon">
                             <li>nimulmahin@gmail.com</li>
                         </a>
-                        <a href="https://wa.me/+8801950787553"><img src="./img/whatsapp.png" alt="whatsapp-icon">
+                        <a id="whbtn" href="https://wa.me/+8801950787553"><img src="./img/whatsapp.png" alt="whatsapp-icon">
                             <li>WhatsApp</li>
                         </a>
-                        <a href="http://m.me/ni.mahin.94"><img src="./img/messenger.png" alt="messenger-icon">
+                        <a id="msbtn" href="http://m.me/ni.mahin.94"><img src="./img/messenger.png" alt="messenger-icon">
                             <li>Messenger</li>
                         </a>
                     </ul>
@@ -558,7 +558,7 @@
 
             <div class="githubcontainer">
                 <div class="gitcapsule">
-                    <a href="https://github.com/gitmahin"><img src="./img/github.png" alt="github-icon">
+                    <a id="gitbtn" href="https://github.com/gitmahin"><img src="./img/github.png" alt="github-icon">
                         <h2>GITMAHIN</h2>
                     </a>
                 </div>
@@ -652,6 +652,45 @@
             scrollToTop()
         })
 
+        function speakToUser(msg) {
+            function speak(text, rate, pitch, volume) {
+                let speakmsg = new SpeechSynthesisUtterance();
+                speakmsg.volume = volume;
+                speakmsg.rate = rate;
+                speakmsg.pitch = pitch;
+                speakmsg.text = text;
+                speakmsg.lang = 'en';
+                speechSynthesis.speak(speakmsg);
+            }
+            if ('speechSynthesis' in window) {
+
+                let rate = 1, pitch = 2, volume = 1;
+                let text = msg
+                speak(text, rate, pitch, volume);
+            } else {
+                console.log('Not supported');
+            }
+        }
+
+        document.getElementById('fbbtn').addEventListener('click', () => {
+            speakToUser("Opening facebook")
+        });
+        document.getElementById('instbtn').addEventListener('click', () => {
+            speakToUser("Opening instagram")
+        });
+        document.getElementById('emailbtn').addEventListener('click', () => {
+            speakToUser("Send me email")
+        });
+        document.getElementById('whbtn').addEventListener('click', () => {
+            speakToUser("Welcome to my whatsapp")
+        });
+        document.getElementById('msbtn').addEventListener('click', () => {
+            speakToUser("Let's chat")
+        });
+        document.getElementById('gitbtn').addEventListener('click', () => {
+            speakToUser("Opening github")
+        });
+        
     </script>
 </body>
 
