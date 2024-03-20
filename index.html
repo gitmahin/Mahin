@@ -10,7 +10,8 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
         rel="stylesheet">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <title>devel0perMahin</title>
     <style>
         * {
@@ -35,7 +36,7 @@
             background-clip: content-box;
         }
 
-        ::-webkit-scrollbar-thumb:hover{
+        ::-webkit-scrollbar-thumb:hover {
             background: linear-gradient(to top, rgb(58, 5, 112), #01030c);
             border-radius: 10px;
             background-clip: content-box;
@@ -231,6 +232,13 @@
 
         }
 
+        .ccontent ul a li {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+        }
+
         .ccontent ul a {
             color: rgb(194, 194, 194);
             font-size: 20px;
@@ -260,11 +268,11 @@
             -webkit-text-fill-color: white;
         }
 
-        .footer{
+        .footer {
             padding: 6px;
         }
 
-        .footcontainer{
+        .footcontainer {
             background: linear-gradient(#01030c, #01030c) padding-box,
                 linear-gradient(to right, rgb(7, 43, 71), #430483) border-box;
             border: 1px solid transparent;
@@ -393,20 +401,20 @@
             align-items: center;
             border-radius: 50px;
             border: none;
-            background: linear-gradient(to top, #01030c, rgba(58, 5, 112, 0.322));
+            background: linear-gradient(to top, #01030c, #3a057052);
             cursor: pointer;
             transition: .1s;
             user-select: none
-           
         }
-        .scrolltotop:active{
+
+        .scrolltotop:active {
             width: 40px;
             height: 60px;
             border-radius: 50px;
             background: linear-gradient(to top, #01030c, rgb(78, 6, 150));
         }
-        
-        .material-symbols-outlined{
+
+        .material-symbols-outlined {
             display: flex;
             justify-content: center;
             align-items: center;
@@ -487,7 +495,7 @@
             }
         }
 
-        .datetime{
+        .datetime {
             color: rgb(177, 177, 177);
             left: 0;
             font-size: 14px;
@@ -497,8 +505,6 @@
             font-weight: 500;
             user-select: none;
         }
-
-
     </style>
 </head>
 
@@ -525,14 +531,14 @@
                 </div>
                 <div class="scontent">
                     <ul>
-                        <a id="fbbtn" href="https://apps.facebook.com/ni.mahin.94"><img src="./img/facebook.png"
+                        <a id="fbbtn" class="fbbtn" href="https://apps.facebook.com/ni.mahin.94"><img src="./img/facebook.png"
                                 alt="facebook-icon">
                             <li>Nimul Islam Mahin</li>
                         </a>
-                        <a id="instbtn" href="https://www.instagram.com/devel0per_mahin/"><img src="./img/instagram.png"
+                        <a id="instbtn" class="instbtn" href="https://www.instagram.com/devel0per_mahin/"><img src="./img/instagram.png"
                                 alt="instagram-icon">
                             <li>devel0per_mahin</li>
-                        </a>
+                        </a>      
                     </ul>
                 </div>
             </div>
@@ -543,14 +549,32 @@
                 </div>
                 <div class="ccontent">
                     <ul>
-                        <a id="emailbtn" href="mailto:nimulmahin@gmail.com"><img src="./img/gmail.png" alt="gmail-icon">
-                            <li>nimulmahin@gmail.com</li>
+                        <a class="emailbtn" id="emailbtn" href="mailto:nimulmahin@gmail.com"><img src="./img/gmail.png"
+                                alt="gmail-icon">
+                            <li>nimulmahin@gmail.com <lord-icon src="https://cdn.lordicon.com/xtzvywzp.json"
+                                    target=".emailbtn" trigger="hover" colors="primary:#ffffff"
+                                    style="width:25px;height:25px">
+                                </lord-icon></li>
                         </a>
-                        <a id="whbtn" href="https://wa.me/+8801950787553"><img src="./img/whatsapp.png" alt="whatsapp-icon">
-                            <li>WhatsApp</li>
+                        <a id="whbtn" class="whbtn" href="https://wa.me/+8801950787553"><img src="./img/whatsapp.png"
+                                alt="whatsapp-icon">
+                            <li>WhatsApp<lord-icon
+                                src="https://cdn.lordicon.com/srsgifqc.json"
+                                trigger="hover"
+                                target=".whbtn"
+                                colors="primary:#ffffff"
+                                style="width:25px;height:25px">
+                            </lord-icon></li>
                         </a>
-                        <a id="msbtn" href="http://m.me/ni.mahin.94"><img src="./img/messenger.png" alt="messenger-icon">
-                            <li>Messenger</li>
+                        <a id="msbtn" class="msbtn" href="http://m.me/ni.mahin.94"><img src="./img/messenger.png"
+                                alt="messenger-icon">
+                            <li>Messenger<lord-icon
+                                src="https://cdn.lordicon.com/ayhtotha.json"
+                                trigger="hover"
+                                target=".msbtn"
+                                colors="primary:#ffffff"
+                                style="width:25px;height:25px">
+                            </lord-icon></li>
                         </a>
                     </ul>
                 </div>
@@ -573,7 +597,8 @@
                         <a href="https://github.com/gitmahin/Notes">
                             <li>
                                 <h3>Notes</h3>
-                                <p>These are not the documentation. These are notes about important topics. Clear explanations, code samples, and best practices.</p>
+                                <p>These are not the documentation. These are notes about important topics. Clear
+                                    explanations, code samples, and best practices.</p>
                             </li>
                         </a>
                         <a href="https://github.com/gitmahin/Tips-Tricks-Tools">
@@ -595,9 +620,9 @@
             <p class="copyright">Copyright &copy devel0perMahin.com | All rights reserverd</p>
 
         </div>
-        <button class="scrolltotop"><span class="material-symbols-outlined">
-            expand_less
-            </span></button>
+        <button class="scrolltotop"><lord-icon target=".scrolltotop" src="https://cdn.lordicon.com/ternnbni.json"
+                trigger="hover" colors="primary:#8930e8">
+            </lord-icon></button>
     </footer>
     <script>
         const scrolltopbtn = document.querySelector('.scrolltotop')
@@ -613,15 +638,15 @@
             const date = new Date()
             const localDate = date.toLocaleString('en-US', {
                 hour12: false,
-            })   
+            })
             datetime.innerHTML = localDate
         }, 1000);
 
-        const scrollToTop = ()=> {
+        const scrollToTop = () => {
             window.scrollTo({ top: 0, behavior: 'smooth' });
         }
 
-        const scrolltbtnsh = ()=>{
+        const scrolltbtnsh = () => {
             window.addEventListener("scroll", (event) => {
                 let scroll = this.scrollY;
                 if (scroll > 200) {
@@ -637,9 +662,9 @@
         setInterval(() => {
             let bodyVScroActive = document.body.scrollHeight;
             let clientHeight = document.documentElement.clientHeight;
-                
+
             scrolltbtnsh()
-            
+
             let hasVerticalScrollbar = bodyVScroActive > clientHeight;
             if (hasVerticalScrollbar == false) {
                 footer.classList.add('absolute')
@@ -690,8 +715,9 @@
         document.getElementById('gitbtn').addEventListener('click', () => {
             speakToUser("Opening github")
         });
-        
+
     </script>
+    <script src="https://cdn.lordicon.com/lordicon.js"></script>
 </body>
 
 </html>
