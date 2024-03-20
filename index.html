@@ -793,7 +793,7 @@ color: #f26307;
             <section class="replit-section">
                 <div class="replit-container">
                     <div class="replit-left">
-                        <a href="https://replit.com/@nimahin25">
+                        <a href="https://replit.com/@nimahin25" id="replitbtn">
                             <div class="replit-logo-box">
                                 <img src="./img/replit_logo.png" alt="Replit Logo">
                                 <div class="replit-logo-box-content">
@@ -935,6 +935,9 @@ color: #f26307;
         });
         document.getElementById('twittbtn').addEventListener('click', () => {
             speakToUser("opening twitter")
+        });
+        document.getElementById('replitbtn').addEventListener('click', () => {
+            speakToUser("opening replit")
         });
 
     </script>
