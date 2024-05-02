@@ -362,6 +362,7 @@
             border: 1px solid transparent;
             width: 310px;
             height: 96px;
+            transition: .5s;
             display: flex;
             flex-direction: column;
             justify-content: flex-start;
@@ -464,13 +465,13 @@
             cursor: pointer;
             background: linear-gradient(#01030c, #01030c) padding-box,
                 linear-gradient(to right, #ff5e0041, #430483) border-box;
-            border-top: 1px solid transparent ;
-            border-bottom: 1px solid transparent ;
+            border-top: 1px solid transparent;
+            border-bottom: 1px solid transparent;
         }
 
         .replit-logo-box:hover .replit-logo-box-content h3 {
-color: #f26307;
-            
+            color: #f26307;
+
         }
 
 
@@ -482,9 +483,9 @@ color: #f26307;
             border-radius: 10px;
             border: none;
             align-self: flex-start;
-            
+
         }
-        
+
         .replit-logo-box-content {
             align-self: flex-start;
         }
@@ -506,7 +507,7 @@ color: #f26307;
             font-family: "Anta", sans-serif !important;
         }
 
-        .replit-left-animation{
+        .replit-left-animation {
             position: absolute;
             top: 0;
             z-index: -1;
@@ -523,7 +524,7 @@ color: #f26307;
             align-self: flex-start;
         }
 
-        .replit-right ul{
+        .replit-right ul {
             display: flex;
             flex-direction: column;
             justify-content: flex-start;
@@ -533,14 +534,14 @@ color: #f26307;
             border: none;
             width: 100%;
 
-            
+
         }
 
-        .replit-right li{
+        .replit-right li {
             list-style-type: none;
             display: flex;
             justify-content: flex-start;
-            align-items: center;       
+            align-items: center;
             max-width: 300px;
             width: 300px;
             padding: 10px;
@@ -552,7 +553,7 @@ color: #f26307;
 
         }
 
-        .replit-right li h4{
+        .replit-right li h4 {
             display: -webkit-box;
             -webkit-line-clamp: 1;
             -webkit-box-orient: vertical;
@@ -560,10 +561,10 @@ color: #f26307;
             width: 100%;
             color: #ffffff;
             font-weight: 400;
-            
+
         }
-        
-        .replit-right li p{
+
+        .replit-right li p {
             display: -webkit-box;
             -webkit-line-clamp: 1;
             -webkit-box-orient: vertical;
@@ -574,7 +575,7 @@ color: #f26307;
 
         }
 
-        .replit-right img{
+        .replit-right img {
             width: 50px;
             height: 50px;
             object-fit: cover;
@@ -583,13 +584,13 @@ color: #f26307;
             border: none;
         }
 
-        .replit-ani-icon{
+        .replit-ani-icon {
             width: 300px;
             height: 300px;
         }
 
-        @media screen and (max-width: 741px){
-            .replit-left{
+        @media screen and (max-width: 741px) {
+            .replit-left {
                 height: fit-content;
             }
         }
@@ -665,18 +666,18 @@ color: #f26307;
                 width: 220px;
             }
 
-            .replit-left{
+            .replit-left {
                 width: 220px;
             }
 
-            .replit-right li{
+            .replit-right li {
                 width: 220px;
             }
 
-            .replit-ani-icon{
-            width: 220px;
-            height: 220px;
-        }
+            .replit-ani-icon {
+                width: 220px;
+                height: 220px;
+            }
         }
 
         .datetime {
@@ -688,6 +689,54 @@ color: #f26307;
             margin-bottom: 10px;
             font-weight: 500;
             user-select: none;
+        }
+
+        .hidden {
+            opacity: 0;
+            transform: translateY(5vh);
+            filter: blur(2px);
+        }
+
+        .visible {
+            opacity: 1;
+            transform: translateY(0vh);
+            filter: blur(0px);
+        }
+
+        .chide {
+            opacity: 0;
+            transform: translateX(-5vw);
+            filter: blur(2px);
+        }
+
+        .cvisible {
+            opacity: 1;
+            transform: translateX(0vw);
+            filter: blur(0px);
+        }
+
+        .fbbtn {
+            transition: .6s;
+        }
+
+        .instbtn {
+            transition: .5s;
+        }
+
+        .twittbtn {
+            transition: .4s;
+        }
+
+        .emailbtn {
+            transition: .7s;
+        }
+
+        .whbtn {
+            transition: .6s;
+        }
+
+        .msbtn {
+            transition: .5s;
         }
     </style>
 </head>
@@ -715,15 +764,15 @@ color: #f26307;
                 </div>
                 <div class="scontent">
                     <ul>
-                        <a id="fbbtn" class="fbbtn" href="https://apps.facebook.com/ni.mahin.94"><img
+                        <a id="fbbtn" class="fbbtn chide" href="https://apps.facebook.com/ni.mahin.94"><img
                                 src="./img/facebook.png" alt="facebook-icon">
                             <li>Nimul Islam Mahin</li>
                         </a>
-                        <a id="instbtn" class="instbtn" href="https://www.instagram.com/pr0grammer_mahin/"><img
+                        <a id="instbtn" class="instbtn chide" href="https://www.instagram.com/pr0grammer_mahin/"><img
                                 src="./img/instagram.png" alt="instagram-icon">
                             <li>pr0grammer_mahin</li>
                         </a>
-                        <a id="twittbtn" class="twittbtn" href="https://twitter.com/pr0grammerMahin"><img
+                        <a id="twittbtn" class="twittbtn chide" href="https://twitter.com/pr0grammerMahin"><img
                                 src="./img/twitter.png" alt="instagram-icon">
                             <li>pr0grammerMahin</li>
                         </a>
@@ -737,20 +786,19 @@ color: #f26307;
                 </div>
                 <div class="ccontent">
                     <ul>
-                        <a class="emailbtn" id="emailbtn" href="mailto:nimulmahin@gmail.com"><img src="./img/gmail.png"
-                                alt="gmail-icon">
-                            <li>Gmail<lord-icon src="https://cdn.lordicon.com/xtzvywzp.json"
-                                    target=".emailbtn" trigger="hover" colors="primary:#ffffff"
-                                    style="width:25px;height:25px">
+                        <a class="emailbtn chide" id="emailbtn" href="mailto:nimulmahin@gmail.com"><img
+                                src="./img/gmail.png" alt="gmail-icon">
+                            <li>Gmail<lord-icon src="https://cdn.lordicon.com/xtzvywzp.json" target=".emailbtn"
+                                    trigger="hover" colors="primary:#ffffff" style="width:25px;height:25px">
                                 </lord-icon></li>
                         </a>
-                        <a id="whbtn" class="whbtn" href="https://wa.me/+8801950787553"><img src="./img/whatsapp.png"
-                                alt="whatsapp-icon">
+                        <a id="whbtn" class="whbtn chide" href="https://wa.me/+8801950787553"><img
+                                src="./img/whatsapp.png" alt="whatsapp-icon">
                             <li>WhatsApp<lord-icon src="https://cdn.lordicon.com/srsgifqc.json" trigger="hover"
                                     target=".whbtn" colors="primary:#ffffff" style="width:25px;height:25px">
                                 </lord-icon></li>
                         </a>
-                        <a id="msbtn" class="msbtn" href="http://m.me/ni.mahin.94"><img src="./img/messenger.png"
+                        <a id="msbtn" class="msbtn chide" href="http://m.me/ni.mahin.94"><img src="./img/messenger.png"
                                 alt="messenger-icon">
                             <li>Messenger<lord-icon src="https://cdn.lordicon.com/ayhtotha.json" trigger="hover"
                                     target=".msbtn" colors="primary:#ffffff" style="width:25px;height:25px">
@@ -768,23 +816,44 @@ color: #f26307;
                 </div>
                 <div class="gitsubcontainer">
                     <ul>
-                        <a href="https://github.com/gitmahin/Projects_For_You">
-                            <li>
-                                <h3>Projects For You</h3>
-                                <p>I upload here some projects for you. It's free.</p>
+                        <a href="https://github.com/gitmahin/Display-posts-in-React.git">
+                            <li class="hidden">
+                                <h3>Display posts in React</h3>
+                                <p>Display posts🎴 from Mongo database in React. The app🌐 gives importance to the
+                                    backend🔙 than the frontend.💻</p>
                             </li>
                         </a>
-                        <a href="https://github.com/gitmahin/Notes">
-                            <li>
+                        <a href="https://github.com/gitmahin/Dynamic-website-using-React.git">
+                            <li class="hidden">
+                                <h3>Dynamic website using React</h3>
+                                <p>React app🌐 with full authentication🛡️. This app is mainly focused on Backend🔙
+                                    rather than the Frontend👨‍💻</p>
+                            </li>
+                        </a>
+                        <a href="https://github.com/gitmahin/Friday-Python-AI.git">
+                            <li class="hidden">
+                                <h3>Friday Python AI</h3>
+                                <p>A Python🐍 desktop💻 automation named Friday🤖</p>
+                            </li>
+                        </a>
+                        <a href="https://github.com/gitmahin/BlogPress.git">
+                            <li class="hidden">
+                                <h3>BlogPress</h3>
+                                <p>BlogPress is a wordpress🌐 theme.🚀</p>
+                            </li>
+                        </a>
+                        <a href="https://github.com/gitmahin/Tips-Tricks-Tools.git">
+                            <li class="hidden">
+                                <h3>Tips-Tricks-Tools</h3>
+                                <p>Explore my tips😉, tricks🎓, and tools⚙️ that I use in my daily programming👨‍💻
+                                    life.🧬</p>
+                            </li>
+                        </a>
+                        <a href="https://github.com/gitmahin/Tips-Tricks-Tools.git">
+                            <li class="hidden">
                                 <h3>Notes</h3>
-                                <p>These are not the documentation. These are notes about important topics. Clear
-                                    explanations, code samples, and best practices.</p>
-                            </li>
-                        </a>
-                        <a href="https://github.com/gitmahin/Tips-Tricks-Tools">
-                            <li>
-                                <h3>Tips-Tricks & Tools</h3>
-                                <p>Explore my tips, tricks, and tools that I use in my daily programming life.</p>
+                                <p>These are not the documentation📃. These are notes📝 about important📌 topics.
+                                    Clear🔎 explanations, code samples, and best practices.👨‍💻</p>
                             </li>
                         </a>
 
@@ -807,8 +876,8 @@ color: #f26307;
                         </a>
 
                         <div class="replit-left-animation">
-                            <lord-icon src="https://cdn.lordicon.com/osckrizz.json" target=".replit-section"  trigger="hover"
-                                colors="primary:#4030e8,secondary:#e86830" class="replit-ani-icon">
+                            <lord-icon src="https://cdn.lordicon.com/osckrizz.json" target=".replit-section"
+                                trigger="hover" colors="primary:#4030e8,secondary:#e86830" class="replit-ani-icon">
                             </lord-icon>
                         </div>
                     </div>
@@ -828,7 +897,7 @@ color: #f26307;
                                     <img src="./img/pythonLogo.png" alt="">
                                     <div class="replit-list-content">
                                         <h4>Python projects</h4>
-                                        <p>2 Repls</p>
+                                        <p>4 Repls</p>
                                     </div>
                                 </li>
                             </a>
@@ -841,7 +910,7 @@ color: #f26307;
                                     </div>
                                 </li>
                             </a>
-                            
+
                         </ul>
                     </div>
                 </div>
@@ -894,6 +963,36 @@ color: #f26307;
             });
 
         }
+
+        const observer = new IntersectionObserver(e => {
+            e.forEach((item) => {
+                if (item.isIntersecting) {
+                    item.target.classList.add("visible")
+                } else {
+                    item.target.classList.remove("visible")
+                }
+            })
+        })
+
+        const hiddenElements = document.querySelectorAll(".hidden")
+        hiddenElements.forEach(element => {
+            observer.observe(element)
+        })
+
+        const Secobserver = new IntersectionObserver(e => {
+            e.forEach((item) => {
+                if (item.isIntersecting) {
+                    item.target.classList.add("cvisible")
+                } else {
+                    item.target.classList.remove("cvisible")
+                }
+            })
+        })
+
+        const hiddenCapsules = document.querySelectorAll(".chide")
+        hiddenCapsules.forEach(element => {
+            Secobserver.observe(element)
+        })
 
         const footer = document.querySelector('.footer')
         setInterval(() => {
