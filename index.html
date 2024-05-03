@@ -1078,7 +1078,6 @@
     </main>
     <footer class="footer">
         <div class="footcontainer">
-            <div class="datetime"></div>
             <p class="copyright">Copyright &copy pr0grammerMahin.com | All rights reserverd</p>
 
         </div>
@@ -1097,14 +1096,6 @@
             backSpeed: 26,
             loop: true
         })
-
-        setInterval(() => {
-            const date = new Date()
-            const localDate = date.toLocaleString('en-US', {
-                hour12: false,
-            })
-            datetime.innerHTML = localDate
-        }, 1000);
 
         const scrollToTop = () => {
             window.scrollTo({ top: 0, behavior: 'smooth' });
