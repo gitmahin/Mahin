@@ -77,13 +77,14 @@
             background-image: url(./img/bannerimg.png);
             max-width: 1500px;
             width: 90vw;
-            height: 415px;
+            height: 250px;
             border: none;
             border-radius: 26px;
             background-position: center;
             background-size: cover;
             box-shadow: inset 0px -52px 40px black;
             transition: .3s;
+            filter: opacity(20%);
         }
 
         .header {
@@ -105,7 +106,7 @@
         .info h1 {
             font-size: 30px;
             color: white;
-            text-align: center;
+            text-align: left;
 
         }
 
@@ -133,7 +134,7 @@
         }
 
         main {
-            margin-top: 120px;
+            margin-top: 295px;
             width: 100%;
             margin-bottom: 90px;
             display: flex;
@@ -627,7 +628,7 @@
 
 
             main {
-                margin-top: 250px;
+                margin-top: 340px;
             }
 
             .ccontent ul a {
@@ -738,6 +739,129 @@
         .msbtn {
             transition: .5s;
         }
+
+        .hero-animation-container {
+            width: 380px;
+            height: 380px;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        .personal-image-container img {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            object-position: center;
+            border-radius: 50%;
+            border: none;
+            transition: .6s;
+
+        }
+
+        .skills-show-up-container {
+            width: 380px;
+            height: 380px;
+            position: absolute;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .skills-show-up-container .img {
+            width: 45px;
+            height: 45px;
+            position: absolute;
+            transition: .5s;
+            z-index: -1;
+
+        }
+
+        .skills-show-up-container .img p {
+            color: white;
+            position: absolute;
+            left: -80%;
+            font-size: 12px;
+        }
+
+        .skills-show-up-container .img img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            object-position: center;
+        }
+
+        .skills-show-up-container .img:nth-child(1) {
+            left: 50px;
+            top: 130px;
+        }
+
+        .skills-show-up-container .img:nth-child(2) {
+            right: 70px;
+            bottom: 110px;
+            width: 38px;
+            height: 38px;
+
+        }
+
+        .skills-show-up-container .img:nth-child(3) {
+            bottom: 50px;
+        }
+
+        .skills-show-up-container .img:nth-child(4) {
+            top: 40px;
+        }
+
+        .skills-show-up-container .img:nth-child(5) {
+            left: 70px;
+            bottom: 100px;
+            width: 40px;
+            height: 40px;
+        }
+
+        .skills-show-up-container .img:nth-child(6) {
+            right: 70px;
+            top: 90px;
+        }
+
+        .skills-show-up-container .img:nth-child(2) img {
+            border-radius: 10px;
+            border: none;
+        }
+
+        .skills-show-up-container .img:nth-child(5) img {
+            border-radius: 10px;
+            border: none;
+        }
+
+        .skills-show-up-container .img:nth-child(6) p {
+            left: 80%;
+        }
+
+        .skills-show-up-container .img:nth-child(1) p {
+            left: -60%;
+        }
+
+        .skills-show-up-container .img .typed-cursor {
+            display: none;
+        }
+
+        .animate img {
+            animation: animateImg 1s linear alternate-reverse infinite;
+        }
+
+        @keyframes animateImg {
+            from {
+                transform: translateY(5px);
+            }
+
+            to {
+                transform: translateY(0px);
+
+            }
+        }
     </style>
 </head>
 
@@ -747,8 +871,42 @@
         <div class="bannerimg">
         </div>
         <header class="header">
-            <div class="mainimg">
-                <img src="./img/141026311.jpg" alt="profile-image">
+            <div class="hero-animation-container">
+
+                <div class="skills-show-up-container">
+                    <div class="img hidden">
+                        <img src="img/javalogo.png" alt="">
+                        <p><span class="type-java"></span></p>
+
+                    </div>
+                    <div class="img hidden">
+                        <img src="img/JavaScript-logo.png" alt="">
+                        <p><span class="type-js"></span></p>
+
+                    </div>
+                    <div class="img hidden">
+                        <img src="img/1200px-Python-logo-notext.svg.png" alt="">
+                        <p><span class="type-py"></span></p>
+
+                    </div>
+                    <div class="img hidden">
+                        <img src="img/nextlogo.png" alt="">
+                        <p><span class="type-nextjs"></span></p>
+
+                    </div>
+                    <div class="img hidden">
+                        <img src="img/reactlogo.png" alt="">
+                        <p><span class="type-jsx"></span></p>
+
+                    </div>
+                    <div class="img hidden">
+                        <img src="img/android-studio-icon.png" alt="">
+                        <p><span class="type-android"></span></p>
+                    </div>
+                </div>
+                <div class="personal-image-container">
+                    <img class="hidden" src="img/141026311.jpg" alt="">
+                </div>
             </div>
             <div class="info">
                 <h1>Nimul Islam Mahin</h1>
@@ -933,7 +1091,7 @@
     <script>
         const scrolltopbtn = document.querySelector('.scrolltotop')
         const datetime = document.querySelector('.datetime')
-        let type = new Typed(".type", {
+        let typeMytitle = new Typed(".type", {
             strings: ["Welcome to my APP", "Connect with me", "Contact me"],
             typeSpeed: 30,
             backSpeed: 26,
@@ -964,35 +1122,45 @@
 
         }
 
-        const observer = new IntersectionObserver(e => {
-            e.forEach((item) => {
-                if (item.isIntersecting) {
-                    item.target.classList.add("visible")
-                } else {
-                    item.target.classList.remove("visible")
-                }
+        function autoType(querySelector, word) {
+            new Typed(querySelector, {
+                strings: [word],
+                typeSpeed: 30,
+                backSpeed: 30,
+                loop: false,
             })
-        })
+        }
 
-        const hiddenElements = document.querySelectorAll(".hidden")
-        hiddenElements.forEach(element => {
-            observer.observe(element)
-        })
+        autoType(".type-java", "Java")
+        autoType(".type-js", "Javascript")
+        autoType(".type-py", "Python")
+        autoType(".type-nextjs", "Next Js")
+        autoType(".type-jsx", "React")
+        autoType(".type-android", "Android Studio")
 
-        const Secobserver = new IntersectionObserver(e => {
-            e.forEach((item) => {
-                if (item.isIntersecting) {
-                    item.target.classList.add("cvisible")
-                } else {
-                    item.target.classList.remove("cvisible")
-                }
+        function elementAnimate(queryname, class1AR, class2AR) {
+            const observer = new IntersectionObserver(e => {
+                e.forEach((item) => {
+                    if (item.isIntersecting) {
+                        item.target.classList.add(class1AR)
+                        item.target.classList.add(class2AR)
+                    } else {
+                        item.target.classList.remove(class1AR)
+                        item.target.classList.remove(class2AR)
+                    }
+                })
             })
-        })
 
-        const hiddenCapsules = document.querySelectorAll(".chide")
-        hiddenCapsules.forEach(element => {
-            Secobserver.observe(element)
-        })
+
+            const hiddenElements = document.querySelectorAll(queryname)
+            hiddenElements.forEach(element => {
+                observer.observe(element)
+            })
+
+        }
+
+        elementAnimate(".hidden", "visible", "animate")
+        elementAnimate(".chide", "cvisible")
 
         const footer = document.querySelector('.footer')
         setInterval(() => {
