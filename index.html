@@ -835,7 +835,7 @@
                 </div>
             </section>
             <section class="replit-section">
-                
+
             </section>
 
         </div>
@@ -953,31 +953,20 @@
             }
         }
 
-        document.getElementById('fbbtn').addEventListener('click', () => {
-            speakToUser("opening facebook")
-        });
-        document.getElementById('instbtn').addEventListener('click', () => {
-            speakToUser("opening instagram")
-        });
-        document.getElementById('emailbtn').addEventListener('click', () => {
-            speakToUser("send me email")
-        });
-        document.getElementById('whbtn').addEventListener('click', () => {
-            speakToUser("let's chat")
-        });
-        document.getElementById('msbtn').addEventListener('click', () => {
-            speakToUser("let's chat")
-        });
-        document.getElementById('gitbtn').addEventListener('click', () => {
-            speakToUser("opening github")
-        });
-        document.getElementById('twittbtn').addEventListener('click', () => {
-            speakToUser("opening twitter")
-        });
-        document.getElementById('replitbtn').addEventListener('click', () => {
-            speakToUser("opening replit")
-        });
+        function speakByGetID(id, speakWord) {
+            document.getElementById(id).addEventListener("click", () => {
+                speakToUser(speakWord)
+            })
+        }
 
+        speakByGetID("fbbtn", "opening facebook")
+        speakByGetID("instbtn", "opening instagram")
+        speakByGetID("emailbtn", "send me email")
+        speakByGetID("whbtn", "let's chat")
+        speakByGetID("msbtn", "let's chat")
+        speakByGetID("gitbtn", "opening github")
+        speakByGetID("twittbtn", "opening twitter")
+        speakByGetID("replitbtn", "opening replit")
     </script>
     <script src="https://cdn.lordicon.com/lordicon.js"></script>
 </body>
