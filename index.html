@@ -842,9 +842,7 @@
     </main>
     <footer class="footer">
         <div class="footcontainer">
-            <div class="datetime"></div>
             <p class="copyright">Copyright &copy pr0grammerMahin.com | All rights reserverd</p>
-
         </div>
         <button class="scrolltotop">
             <span class="material-symbols-outlined">
@@ -854,21 +852,12 @@
     </footer>
     <script>
         const scrolltopbtn = document.querySelector('.scrolltotop')
-        const datetime = document.querySelector('.datetime')
         let typeMytitle = new Typed(".type", {
             strings: ["Welcome to my APP", "Connect with me", "Contact me"],
             typeSpeed: 30,
             backSpeed: 26,
             loop: true
         })
-
-        setInterval(() => {
-            const date = new Date()
-            const localDate = date.toLocaleString('en-US', {
-                hour12: false,
-            })
-            datetime.innerHTML = localDate
-        }, 1000);
 
         const scrollToTop = () => {
             window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -890,7 +879,6 @@
             new Typed(querySelector, {
                 strings: [word],
                 typeSpeed: 30,
-                backSpeed: 30,
                 loop: false,
             })
         }
