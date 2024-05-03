@@ -424,6 +424,102 @@
             user-select: none;
         }
 
+        .replit-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .replit-logo-container {
+            width: 220px;
+            height: 60px;
+            border-radius: 5px;
+            overflow: hidden;
+            box-sizing: border-box;
+
+        }
+
+        .replit-logo-container:hover {
+            transform: translateY(-2px);
+            transition: .1s;
+            box-shadow: 0px 3px 15px #ff6f0053;
+            border-bottom: 2px solid #ff6f00;
+
+        }
+
+        .replit-logo-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+
+        }
+
+        .replit-repls ul {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .replit-repls ul a li {
+            list-style-type: none;
+            width: 300px;
+            height: 80px;
+            border-radius: 5px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            background-color: #16e5c917;
+            transition: .5s;
+        }
+
+        .replit-repls ul a li:hover {
+            transform: translateY(-2px);
+            transition: .2s;
+            box-shadow: 0px 3px 10px #16e5c917;
+        }
+
+        .replit-repls ul a li img {
+            width: 60px;
+            height: 60px;
+            object-fit: cover;
+            object-position: center;
+            border: none;
+            border-radius: 5px;
+        }
+
+        .repl-info {
+            width: 190px;
+            overflow: hidden;
+        }
+
+        .repl-info h3 {
+            display: -webkit-box;
+            -webkit-line-clamp: 1;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            font-weight: 500;
+            color: #ff6f00;
+        }
+
+        .repl-info span {
+            font-size: 14px;
+            color: #c2c2c2;
+        }
+
+        .replAnimate {
+            opacity: 0;
+            transform: translateY(5vh);
+            filter: blur(2px);
+        }
+
+        .replvisible {
+            opacity: 1;
+            transform: translateY(0vh);
+            filter: blur(0px);
+        }
+
 
         @media screen and (max-width: 567px) {
 
@@ -721,7 +817,7 @@
                     </div>
                 </div>
                 <div class="personal-image-container">
-                    <img src="img/141026311.jpg" alt="">
+                    <img src="img/myimg.png" alt="">
                 </div>
             </div>
             <div class="info">
@@ -835,7 +931,57 @@
                 </div>
             </section>
             <section class="replit-section">
+                <div class="replit-container">
+                    <div class="replit-logo-container">
+                        <a href="https://replit.com/@nimahin25" id="replitbtn">
+                            <img src="img/replit_logo.png" alt="Replit logo">
+                        </a>
+                    </div>
+                    <div class="replit-repls">
+                        <ul>
+                            <a href="https://replit.com/repls/folder/HTML%2C%20CSS%2C%20JS%20projects">
+                                <li class="replAnimate">
+                                    <div class="repl-info">
+                                        <h3 class="repl-title">
+                                            HTML, CSS, JS
+                                        </h3>
+                                        <span class="total-num-of-repls">
+                                            6 Repls
+                                        </span>
+                                    </div>
+                                    <img src="img/htmllogo.png" alt="">
+                                </li>
+                            </a>
+                            <a href="https://replit.com/repls/folder/NodeJs%20projects">
+                                <li class="replAnimate">
+                                    <div class="repl-info">
+                                        <h3 class="repl-title">
+                                            Node.js
+                                        </h3>
+                                        <span class="total-num-of-repls">
+                                            4 Repls
+                                        </span>
+                                    </div>
+                                    <img src="img/nodejs.png" alt="">
+                                </li>
+                            </a>
+                            <a href="https://replit.com/repls/folder/Python%20projects">
+                                <li class="replAnimate">
+                                    <div class="repl-info">
+                                        <h3 class="repl-title">
+                                            Python
+                                        </h3>
+                                        <span class="total-num-of-repls">
+                                            4 Repls
+                                        </span>
+                                    </div>
+                                    <img src="img/pythonLogo.png" alt="">
+                                </li>
+                            </a>
 
+                        </ul>
+                    </div>
+                </div>
             </section>
 
         </div>
@@ -913,6 +1059,7 @@
 
         elementAnimate(".hidden", "visible", "animate")
         elementAnimate(".chide", "cvisible")
+        elementAnimate(".replAnimate", "replvisible")
 
         const footer = document.querySelector('.footer')
         setInterval(() => {
