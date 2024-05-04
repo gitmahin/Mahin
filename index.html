@@ -97,6 +97,17 @@
             transform: translate(0%, 50%);
         }
 
+        .personal-image-container img {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            object-position: center;
+            border-radius: 50%;
+            border: none;
+            transition: .6s;
+
+        }
+
         .info {
             display: flex;
             flex-direction: column;
@@ -591,6 +602,7 @@
             .gitsubcontainer ul li {
                 width: 220px;
             }
+
         }
 
         .datetime {
@@ -662,16 +674,7 @@
             position: relative;
         }
 
-        .personal-image-container img {
-            width: 150px;
-            height: 150px;
-            object-fit: cover;
-            object-position: center;
-            border-radius: 50%;
-            border: none;
-            transition: .6s;
 
-        }
 
         .skills-show-up-container {
             width: 380px;
@@ -713,8 +716,6 @@
         .skills-show-up-container .img:nth-child(2) {
             right: 70px;
             bottom: 110px;
-            width: 38px;
-            height: 38px;
 
         }
 
@@ -729,8 +730,7 @@
         .skills-show-up-container .img:nth-child(5) {
             left: 70px;
             bottom: 100px;
-            width: 40px;
-            height: 40px;
+
         }
 
         .skills-show-up-container .img:nth-child(6) {
@@ -773,6 +773,33 @@
                 transform: translateY(0px);
 
             }
+        }
+
+        @media screen and (max-width: 500px) {
+            .personal-image-container img {
+                width: 140px;
+                height: 140px;
+            }
+
+            .skills-show-up-container .img {
+                width: 35px;
+                height: 35px;
+            }
+
+            .skills-show-up-container {
+                width: 350px;
+                height: 350px;
+            }
+
+            .skills-show-up-container .img:nth-child(1) {
+                left: 61px;
+                top: 108px;
+            }
+
+            .skills-show-up-container .img:nth-child(3) {
+                bottom: 60px;
+            }
+
         }
     </style>
 </head>
