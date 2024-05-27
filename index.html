@@ -7,6 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="shortcut icon" type="image/png" href="./favicon.png">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
     <link
         href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
         rel="stylesheet">
@@ -212,7 +213,7 @@
             border-top: 1px solid rgba(255, 255, 255, 0.096);
             position: relative;
             padding: 40px 0px 40px 0px;
-            margin-bottom: 60px;
+            margin-bottom: 10px;
         }
 
         .ccapsule {
@@ -527,6 +528,117 @@
             filter: blur(0px);
         }
 
+
+        .discord-section {
+            width: 100%;
+            height: fit-content;
+            padding: 20px 0px;
+            margin-bottom: 100px;
+            margin-top: 40px;
+            display: flex;
+            justify-content: left;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            border-top: 1px solid #693ee9;
+            border-bottom: 1px solid #693ee9;
+            position: relative;
+        }
+
+
+        .dis-logo {
+            width: 50px;
+            height: 50px;
+            position: relative;
+            cursor: pointer;
+        }
+
+        .dis-logo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            border-radius: 15px;
+            border: none;
+        }
+
+        .dis-logo .dis-username {
+            color: white;
+            background-color: #693ee9;
+            position: absolute;
+            right: -130px;
+            top: -15px;
+            z-index: 11;
+            padding: 0px 10px;
+            border-radius: 10px;
+            display: none;
+            opacity: 0%;
+        }
+
+        .dis-logo:hover .dis-username {
+            display: flex;
+            animation: disusername .1s linear forwards;
+        }
+
+        .dis-logo:hover {
+            outline: 2px solid #693ee9;
+            border-radius: 15px;
+            border: none;
+            outline-offset: 5px;
+        }
+
+        .dis-servers img {
+            width: 45px;
+            height: 45px;
+            border-radius: 15px;
+            border: none;
+        }
+
+        @keyframes disusername {
+            to {
+                right: -150px;
+                opacity: 100%;
+            }
+        }
+
+        .dis-server-item {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            width: 220px;
+            background-color: #693ee923;
+            padding: 4px;
+            padding-right: 10px;
+            border-radius: 10px;
+        }
+
+        .dis-server-item:hover {
+            transform: translate(0%, -10%);
+            transition: .2s;
+        }
+
+        .dis-server-item p {
+            font-weight: 500;
+        }
+
+
+        .dis-servers {
+            display: flex;
+            justify-content: left;
+            align-items: center;
+            gap: 15px;
+            overflow-x: scroll;
+            max-width: 1000px;
+            width: 100%;
+            padding-top: 12px;
+        }
+
+        .discord-section span {
+            color: white;
+            position: absolute;
+            top: -25px;
+        }
 
         @media screen and (max-width: 567px) {
 
@@ -905,6 +1017,24 @@
                 </div>
             </section>
 
+            <section class="discord-section">
+
+                <div class="dis-logo">
+                    <img src="./img/discord.png" alt="">
+                    <p class="dis-username">pr0grammermahin</p>
+                </div>
+
+                <div class="dis-servers">
+                    <span>Discord Servers</span>
+                    <a href="https://discord.gg/AuSZJ4gS">
+                        <div class="dis-server-item">
+                            <img src="./img/disservimg.jpg" alt="">
+                            <p class="dis-user">pr0grammers Zone</p>
+                        </div>
+                    </a>
+                </div>
+            </section>
+
             <section class="githubcontainer">
                 <div class="gitcapsule">
                     <a id="gitbtn" href="https://github.com/gitmahin"><img src="./img/github.png" alt="github-icon">
@@ -916,13 +1046,15 @@
                         <a href="https://github.com/gitmahin/identity-nextjs.git">
                             <li class="hidden">
                                 <h3>identity NextJS</h3>
-                                <p>NextJS App with full Authentication🛡️. Share🤝 your identity👤🪪 to people😃 and explore🔍 other identities.</p>
+                                <p>NextJS App with full Authentication🛡️. Share🤝 your identity👤🪪 to people😃 and
+                                    explore🔍 other identities.</p>
                             </li>
                         </a>
                         <a href="https://github.com/gitmahin/Contact-Book.git">
                             <li class="hidden">
                                 <h3>Contact Book</h3>
-                                <p>Contact☎️ Book📙 is a Python application with SQLite# database🛢️. Smart validation🛡️ enabled to avoid user👤 invalid inputs.</p>
+                                <p>Contact☎️ Book📙 is a Python application with SQLite# database🛢️. Smart
+                                    validation🛡️ enabled to avoid user👤 invalid inputs.</p>
                             </li>
                         </a>
                         <a href="https://github.com/gitmahin/PYTO-YT-Video-Downloader.git">
@@ -934,7 +1066,8 @@
                         <a href="https://github.com/gitmahin/GuestGenius">
                             <li class="hidden">
                                 <h3>GuestGenius</h3>
-                                <p>GuestGenius is a Python🐍 application💻⚙️ for storing🛢 hotel guest🫂 data in Excel.📃🚀</p>
+                                <p>GuestGenius is a Python🐍 application💻⚙️ for storing🛢 hotel guest🫂 data in
+                                    Excel.📃🚀</p>
                             </li>
                         </a>
                         <a href="https://github.com/gitmahin/Display-posts-in-React.git">
@@ -1160,8 +1293,29 @@
         speakByGetID("gitbtn", "opening github")
         speakByGetID("twittbtn", "opening twitter")
         speakByGetID("replitbtn", "opening replit")
+
+        const dis_logo = document.querySelector(".dis-logo")
+        const dis_user = document.querySelector(".dis-username").innerHTML
+
+        const toast = (message) => {
+            Toastify({
+                text: message,
+                duration: 1500,
+                gravity: "bottom",
+                position: "center"
+            }).showToast();
+
+        }
+
+        dis_logo.addEventListener("click", () => {
+            navigator.clipboard.writeText(dis_user)
+            toast("Username copied!")
+
+        })
+
     </script>
     <script src="https://cdn.lordicon.com/lordicon.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
 </body>
 
 </html>
