@@ -616,11 +616,12 @@
             padding: 4px;
             padding-right: 10px;
             border-radius: 10px;
+            transition: .2s;
         }
 
         .dis-server-item:hover {
             transform: translate(0%, -10%);
-            transition: .2s;
+            
         }
 
         .dis-server-item p {
@@ -1032,7 +1033,7 @@
                 <div class="dis-servers">
                     <span>Discord Servers</span>
                     <a href="https://discord.gg/AuSZJ4gS">
-                        <div class="dis-server-item">
+                        <div class="dis-server-item" id="discord_item">
                             <img src="./img/disservimg.jpg" alt="">
                             <p class="dis-user">pr0grammers Zone</p>
                         </div>
@@ -1290,6 +1291,7 @@
         speakByGetID("gitbtn", "opening github")
         speakByGetID("twittbtn", "opening twitter")
         speakByGetID("replitbtn", "opening replit")
+        speakByGetID("discord_item", "opening discord")
 
         const dis_logo = document.querySelector(".dis-logo")
         const dis_user = document.querySelector(".dis-username").innerHTML
